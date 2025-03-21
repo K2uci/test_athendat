@@ -26,11 +26,10 @@ export class CommentsService {
       .map((comment) => `El usuario ${comment.user} comentó esto: " ${comment.text} " -- En la fecha ${comment.date}`)
       .join('\n');
 
-    const filePath = path.join(__dirname, '..', 'comments.txt');
-    console.log(filePath)
+    const filePath = path.join(__dirname, '../..', 'comments.txt');
     fs.writeFileSync(filePath, fileContent);
 
-    return filePath;
+    return filePath;  
   }
 }
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImszQGV4YW1wbGUuY29tIiwic3ViIjoiNjdkY2MzYjVlN2NmY2Y2ZDViM2MyODg1IiwiaWF0IjoxNzQyNTIxMzA3LCJleHAiOjE3NDI1MjQ5MDd9.nAjsF875OrXd3S1MPTJkolN4IUSUKGNR0z9Lf7PF3WA
